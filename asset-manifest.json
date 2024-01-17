@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.9c5c5444.css",
-    "main.js": "/static/js/main.30388935.js",
-    "index.html": "/index.html",
-    "main.9c5c5444.css.map": "/static/css/main.9c5c5444.css.map",
-    "main.30388935.js.map": "/static/js/main.30388935.js.map"
+    "main.css": "/etf_portfolio_composition/static/css/main.9c5c5444.css",
+    "main.js": "/etf_portfolio_composition/static/js/main.30388935.js",
+    "index.html": "/etf_portfolio_composition/index.html",
+    "main.9c5c5444.css.map": "/etf_portfolio_composition/static/css/main.9c5c5444.css.map",
+    "main.30388935.js.map": "/etf_portfolio_composition/static/js/main.30388935.js.map"
   },
   "entrypoints": [
     "static/css/main.9c5c5444.css",
