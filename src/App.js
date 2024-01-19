@@ -64,8 +64,54 @@ export default function App() {
     }
   }
 
+  // calculate percentages for each ticker
+  let composition_object = new Object();
+  if (usdPercent > 0) {
+    composition_object["USD"] = usdPercent
+  }
+  if (djdPercent > 0) {
+    for (let [ticker, percent] of etf_djd) {
+      if (ticker in composition_object) {
+        composition_object[ticker] += percent * djdPercent / 100.0;
+      } else {
+        composition_object[ticker] = percent * djdPercent / 100.0;
+      }
+    }
+  }
+  if (qqqPercent > 0) {
+    for (let [ticker, percent] of etf_qqq) {
+      if (ticker in composition_object) {
+        composition_object[ticker] += percent * qqqPercent / 100.0;
+      } else {
+        composition_object[ticker] = percent * qqqPercent / 100.0;
+      }
+    }
+  }
+  if (vgtPercent > 0) {
+    for (let [ticker, percent] of etf_vgt) {
+      if (ticker in composition_object) {
+        composition_object[ticker] += percent * vgtPercent / 100.0;
+      } else {
+        composition_object[ticker] = percent * vgtPercent / 100.0;
+      }
+    }
+  }
+  if (vooPercent > 0) {
+    for (let [ticker, percent] of etf_voo) {
+      if (ticker in composition_object) {
+        composition_object[ticker] += percent * vooPercent / 100.0;
+      } else {
+        composition_object[ticker] = percent * vooPercent / 100.0;
+      }
+    }
+  }
   
-  const stock_compositions = etf_djd;
+  // sort found ticker percentages in an array
+  let stock_compositions = [];
+  for (let ticker in composition_object) {
+    stock_compositions.push([ticker, composition_object[ticker]])
+  }
+  stock_compositions.sort((a,b) => b[1] - a[1]);
 
   return (
     <div className="centerspace">
@@ -86,7 +132,7 @@ export default function App() {
         <div className="scrollvert">
           {
             stock_compositions.map((stock) => 
-              <Stock key={stock[0]} ticker={stock[0]} percent={stock[1]} />
+              <Stock key={stock[0]} ticker={stock[0]} percent={stock[1].toFixed(2)} />
             )
           }
         </div>
