@@ -32,8 +32,6 @@ export default function App() {
     set_etf_qqq(etf_qqq)
     set_etf_vgt(etf_vgt)
     set_etf_voo(etf_voo)
-
-    console.log(etf_djd)
 };
   useEffect(() => {
     loadData();

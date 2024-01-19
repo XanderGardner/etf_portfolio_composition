@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/etf_portfolio_composition/static/css/main.6c073dcd.css",
-    "main.js": "/etf_portfolio_composition/static/js/main.1b2d14cf.js",
+    "main.css": "/etf_portfolio_composition/static/css/main.5e3d9c72.css",
+    "main.js": "/etf_portfolio_composition/static/js/main.f96eed9d.js",
     "index.html": "/etf_portfolio_composition/index.html",
-    "main.6c073dcd.css.map": "/etf_portfolio_composition/static/css/main.6c073dcd.css.map",
-    "main.1b2d14cf.js.map": "/etf_portfolio_composition/static/js/main.1b2d14cf.js.map"
+    "main.5e3d9c72.css.map": "/etf_portfolio_composition/static/css/main.5e3d9c72.css.map",
+    "main.f96eed9d.js.map": "/etf_portfolio_composition/static/js/main.f96eed9d.js.map"
   },
   "entrypoints": [
-    "static/css/main.6c073dcd.css",
-    "static/js/main.1b2d14cf.js"
+    "static/css/main.5e3d9c72.css",
+    "static/js/main.f96eed9d.js"
   ]
 }
