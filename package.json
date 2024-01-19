@@ -4,12 +4,13 @@
   "main": "/src/index.js",
   "homepage": "https://xandergardner.github.io/etf_portfolio_composition",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "npm run copy-assets && react-scripts start",
+    "build": "npm run copy-assets && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "deploy": "gh-pages -d build",
-    "predeploy": "npm run build"
+    "predeploy": "npm run build",
+    "copy-assets": "ncp public/assets/ build/assets/"
   },
   "dependencies": {
     "react": "^18.0.0",
@@ -17,7 +18,8 @@
     "react-scripts": "^5.0.0"
   },
   "devDependencies": {
-    "gh-pages": "^6.1.1"
+    "gh-pages": "^6.1.1",
+    "ncp": "^2.0.0"
   },
   "browserslist": {
     "production": [
